@@ -1,0 +1,16 @@
+<html>
+    <head>
+        My Chat Room
+    </head>
+    <body>
+        <ul>
+            {% for msg in messages %}
+            <li>{{msg.message}}</li>
+            {% endfor %}
+        </ul>
+        <form action="/chat/" method="post">
+            {% csrf_token %}
+            {{ form }}
+        </form>
+    </body>
+</html>
