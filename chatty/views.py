@@ -20,7 +20,7 @@ def hello(request):
             'message': 'Hello World 2!'
         }
     )
-    return render(request, 'hello.html', {'name': 'new location'})
+    return render(request, 'hello.html', {'name': 'new locations'})
 
 def chat(request):
     chat_db = dynamodb.Table('Chat')
